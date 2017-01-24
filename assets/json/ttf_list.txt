@@ -1,0 +1,38 @@
+{
+    "arraydata": [
+        {
+            "name": "精选",
+            "type": 0,
+            "layers": "&#xe602;&#xe603;&#xe601;&#xe604;",
+            "colors": "#7784DCFD;#E744C1FB;#FFFCE918;#FF229CFA"
+        },
+        {
+            "name": "软件",
+            "type": 0,
+            "layers": "&#xe602;&#xe603;&#xe601;&#xe604;",
+            "colors": "#7784DCFD;#E744C1FB;#FFFCE918;#FF229CFA"
+        },
+        {
+            "name": "游戏",
+            "type": 0,
+            "layers": "&#xe602;&#xe603;&#xe601;&#xe604;",
+            "colors": "#7784DCFD;#E744C1FB;#FFFCE918;#FF229CFA"
+        },
+        {
+            "name": "娱乐",
+            "type": 0,
+            "layers": "&#xe602;&#xe603;&#xe601;&#xe604;",
+            "colors": "#7784DCFD;#E744C1FB;#FFFCE918;#FF229CFA"
+        },
+        {
+            "name": "优惠",
+            "type": 0,
+            "layers": "&#xe602;&#xe603;&#xe601;&#xe604;",
+            "colors": "#7784DCFD;#E744C1FB;#FFFCE918;#FF229CFA"
+        }
+    ],
+    "name": "TAB字体",
+    "url": "http://XXX.ttf",
+    "startdate": 233343435435,
+    "enddate": 233343435435
+}

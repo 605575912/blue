@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="translucent">#00000000</color>
+
+    <color name="traffic_wave_startcolor_orange">#ccdffc</color>
+    <color name="traffic_wave_centercolor_orange">#ccdffc</color>
+    <color name="traffic_wave_endcolor_orange">#ccdffc</color>
+
+
+
+
+
+
+
+</resources>

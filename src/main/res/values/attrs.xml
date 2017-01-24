@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <declare-styleable name="PathView">
+    <attr name="pathColor" format="color|reference"/>
+    <attr name="pathWidth" format="dimension|reference"/>
+    <attr name="svg" format="reference"/>
+    <attr name="fill" format="boolean"/>
+    <attr name="fillColor" format="color|reference"/>
+    <attr name="naturalColors" format="boolean"/>
+  </declare-styleable>
+  <declare-styleable name="FishBowlView">
+    <attr name="water_color" format="reference|color" />
+    <attr name="water_center_color" format="reference|color" />
+    <attr name="water_end_color" format="reference|color" />
+    <attr name="fishbowl_progress" format="integer" />
+    <attr name="fishbowl_maxprogress" format="integer" />
+    <attr name="fishbowl_drawable_id" format="reference" />
+    <attr name="fishbowl_wavetime" format="integer" />
+    <attr name="fishbowl_strokewidth" format="dimension" />
+  </declare-styleable>
+
+
+  <declare-styleable name="ViewAnimatorHorizontal">
+    <!-- Identifier for the animation to use when a view is shown. -->
+    <attr name="inAnimationHorizontal" format="reference" />
+    <!-- Identifier for the animation to use when a view is hidden. -->
+    <attr name="outAnimationHorizontal" format="reference" />
+    <!-- Defines whether to animate the current View when the ViewAnimation
+         is first displayed. -->
+    <attr name="animateFirstViewHorizontal" format="boolean" />
+  </declare-styleable>
+
+  <declare-styleable name="AdapterViewAnimatorHorizontal">
+
+    <attr name="stackViewStyleHorizontal" format="reference" />
+
+    <!-- Identifier for the animation to use when a view is shown. -->
+    <attr name="inAnimationHorizontal" />
+    <!-- Identifier for the animation to use when a view is hidden. -->
+    <attr name="outAnimationHorizontal" />
+    <!--Defines whether the animator loops to the first view once it
+    has reached the end of the list. -->
+    <attr name="loopViewsHorizontal" format="boolean" />
+    <!-- Defines whether to animate the current View when the ViewAnimation
+    is first displayed. -->
+    <attr name="animateFirstViewHorizontal" />
+  </declare-styleable>
+
+  <declare-styleable name="StackViewHorizontal">
+    <!-- Color of the res-out outline. -->
+    <attr name="resOutColorHorizontal" format="color" />
+    <!-- Color of the outline of click feedback. -->
+    <attr name="clickColorHorizontal" format="color" />
+  </declare-styleable>
+  <declare-styleable name="DownView">
+    <attr name="width_color" format="reference|color" />
+    <attr name="progress_color" format="reference|color" />
+    <attr name="_progress" format="integer" />
+    <attr name="_maxprogress" format="integer" />
+    <attr name="_strokewidth" format="dimension" />
+    <attr name="_roundx" format="dimension" />
+    <attr name="_roundy" format="dimension" />
+    <attr name="with_cover" format="boolean"/>
+  </declare-styleable>
+  <declare-styleable name="RoundTextView">
+    <attr name="background_fillcolor" format="reference|color" />
+    <attr name="t_roundx" format="dimension" />
+    <attr name="t_roundy" format="dimension" />
+    <attr name="strokewidth_color" format="reference|color" />
+    <attr name="v_strokewidth" format="dimension" />
+  </declare-styleable>
+</resources>

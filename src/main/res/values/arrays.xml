@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer-array name="default_mmnotification_colors_v23">
+        <item>0xFFFFFFFF</item>
+        <item>0xFF333333</item>
+        <item>0xFF999999</item>
+    </integer-array>
+    <integer-array name="default_mmnotification_colors_v14">
+        <item>0xFF000000</item>
+        <item>0xFFFFFFFF</item>
+        <item>0xFF999999</item>
+    </integer-array>
+</resources>

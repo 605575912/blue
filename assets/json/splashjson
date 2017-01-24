@@ -1,0 +1,32 @@
+{
+    "splashs": [
+        {
+            "id": 84,
+            "imgurl": "http://img.zcool.cn/community/01485255a8d1ae6ac72581780ce843.png",
+            "jumpurl": "http://image.baidu.com",
+            "begintime": 1450076939614,
+            "endtime": 1458089547829
+        },
+        {
+            "id": 165,
+            "imgurl": "http://img.zcool.cn/community/01e10156443acd6ac7259e0f056117.jpg",
+            "jumpurl": "http://fanyi.baidu.com/#auto/zh/",
+            "begintime": 1453076939614,
+            "endtime": 1558084547829
+        },
+        {
+            "id": 96,
+            "imgurl": "http://img.zcool.cn/community/01c894557a79cf00000059ff80064a.jpg",
+            "jumpurl": "https://www.baidu.com",
+            "begintime": 1453076939614,
+            "endtime": 1458094547829
+        },
+        {
+            "id": 916,
+            "imgurl": "http://cdn.duitang.com/uploads/item/201510/18/20151018174715_Giwrj.thumb.700_0.jpeg",
+            "jumpurl": "https://www.baidu.com",
+            "begintime": 1453076939614,
+            "endtime": 1458094547829
+        }
+    ]
+}

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+     <Preference
+            android:key="PREF_SETTING_NONEED"
+            android:title="系统设置" />
+     
+     <PreferenceCategory android:title="安全中心" >
+         
+         <Preference
+            android:key="SAFER_MANAGER_CENTER"
+            android:title="设置" />
+         
+         </PreferenceCategory>
+     
+    <PreferenceCategory android:title="下载设置"
+        android:key="downset">
+    
+
+        <Preference
+            android:key="PREF_DOWNLOAD_FOLW_LIMIT"
+            android:summary="应用超过10M时进行提醒"
+            android:title="2G/3G/4G下载确认提示" />
+        
+        <Preference
+            android:key="PREF_DOWNLOAD_TASKCOUNT_SIMULTANEOUSLY"
+            android:summary="设置同时下载应用的任务数上限"
+            android:title="同时下载任务数" />
+                <Preference
+            android:key="PREF_ACCESSIBILITY"
+            android:summary="支持Android4.1以上,无需Root权限"
+            android:title="自动安装应用" />
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="PREF_DOWNLOAD_DELINSTALLEDPKG"
+            android:summary="安装完自动删除安装包设置"
+            android:title="下载安装后是否删除安装包" />
+
+        <Preference
+            android:enabled="false"
+            android:key="PREF_DOWNLOAD_DEFAULT_PATH"
+            android:summary="/sdcard/mm/download"
+            android:title="下载默认路径" />
+    </PreferenceCategory>
+    
+       <PreferenceCategory android:title="更新设置" >
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="PREF_DOWNLOAD_ZEROFLOW"
+            android:summary="将在电量充足,连接到WiFi的前提下,为您下载应用升级包,是否升级由您决定"
+            android:title="零流量更新" />
+
+        <Preference
+            android:key="PREF_DOWNLOAD_WIFIBLACKLIST"
+            android:summary="在指定WiFi中不更新"
+            android:title="WiFi黑名单" />
+    </PreferenceCategory>   
+    
+<!--         <PreferenceCategory
+         android:title="@string/root_setting_title" 
+         android:key="PREF_ROOTSETTING">
+        <CheckBoxPreference
+            android:defaultValue="false"      
+            android:key="PREF_ROOTSETTING_CHECK"      
+            android:summary="@string/root_setting_extra_desc"
+            android:title="@string/root_setting_main_desc" />
+    </PreferenceCategory> -->
+        
+          <PreferenceCategory android:title="消息推送设置" >
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="PUSH_RECOMMEND_ENABLE"
+            android:summary="接收编辑团队的应用和活动推荐"
+            android:title="MM推荐" />
+        
+                <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="APP_UPDATE_NOTIFY_ENABLE"
+            android:summary="手机已安装应用更新提示"
+            android:title="更新提示" />
+    </PreferenceCategory>   
+     
+         <PreferenceCategory android:title="数据清除" >
+   <Preference
+            android:key="PREF_CLEARCACHE"
+            android:summary="清除手机上缓存的文件与图片等"
+            android:title="清除缓存" />
+    </PreferenceCategory>    
+     
+         
+         
+         
+    <PreferenceCategory android:title="随e行WLAN设置" >
+   
+    <!--   <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="PREF_DOWNLOAD_DEF"
+            android:summary="优先使用WLAN访问网络"
+            android:title="WLAN优选" />
+                        -->
+                       
+                       <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="PREF_WLANCMCC_FIRST"
+            android:summary="优先使用CMCC-WEB访问网络"
+            android:title="CMCC-WEB优选" />
+        
+   <Preference
+            android:key="PREF_WLANCMCC_LOGIN"
+            android:summary="中国移动随e行WLAN设置"
+            android:title="CMCC-WEB登录设置" />
+    </PreferenceCategory>   
+         
+         
+                   
+<PreferenceCategory android:title="桌面快捷设置" >
+   <Preference
+            android:key="PREF_FAST_ICON"
+            android:summary="在桌面创建频道快捷方式"
+            android:title="创建桌面快捷方式" />
+    </PreferenceCategory>  
+    
+<PreferenceCategory android:title="其他设置" >
+   <Preference
+            android:key="TRAFFIC_SETTING"
+            android:title="流量管家及MM精灵设置"
+            android:summary="流量保护，联网权限等功能设置" />
+    </PreferenceCategory>   
+                   
+    
+<PreferenceCategory 
+        android:key="MMSETTING_CATEGORY_OTHER" 
+        android:title="其他" >
+ <Preference
+            android:key="PREF_SETTING_CHECKVERSION"
+            android:title="检查更新" />
+  <Preference
+            android:key="PREF_SETTING_ABOUTMM"
+            android:title="关于MM" />
+   <Preference
+            android:key="PREF_SETTING_HELP"
+            android:title="在线客服" />
+    <Preference
+            android:key="PREF_SETTING_TELLUS"
+            android:title="反馈" />
+        <!--  <Preference
+            android:key="PREF_SETTING_TESTING"
+            android:title="测试" />-->
+     <Preference
+            android:key="PREF_SETTING_LOGOUT"
+            android:title="退出当前账号" />
+</PreferenceCategory>
+
+</PreferenceScreen>

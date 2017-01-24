@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Blue</string>
+    <string name="action_settings">Settings</string>
+    <plurals name="numberOfSongsAvailable">
+        <item quantity="one">Znaleziono %d piosenkę.</item>
+        <item quantity="few">Znalezisono %d piosenki.</item>
+        <item quantity="other">Znaleziono %d piosenek.</item>
+    </plurals>
+</resources>

@@ -1,0 +1,34 @@
+{
+    "arraydata": [
+        {
+            "name": "3333",
+            "type": 0,
+            "icon_url": "http://d.pcs.baidu.com/thumbnail/b46bd09e7935dd6d7498d723901625eb?fid=3205907199-250528-832477968188321&time=1459774800&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-9hc5KQk9lriKFnT1K332t0FAwWY%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=2200454284200991524&dp-callid=0&size=c710_u500&quality=100"
+        },
+        {
+            "name": "11111",
+            "type": 1
+        },
+        {
+            "name": "44444",
+            "type": 2,
+            "icon_url": "http://d.pcs.baidu.com/thumbnail/b46bd09e7935dd6d7498d723901625eb?fid=3205907199-250528-832477968188321&time=1459774800&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-9hc5KQk9lriKFnT1K332t0FAwWY%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=2200454284200991524&dp-callid=0&size=c710_u500&quality=100"
+        },
+        {
+            "name": "3333",
+            "type": 2,
+            "icon_url": "http://d.pcs.baidu.com/thumbnail/9d672701811223f2f7d1a144bb216e93?fid=3205907199-250528-344624704104119&time=1459774800&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-ZF3iUmtUsct4E5YHFOXklEDG3FE%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=2200754657365812247&dp-callid=0&size=c710_u500&quality=100"
+        },
+        {
+            "name": "3333",
+            "type": 2,
+            "icon_url": "http://d.pcs.baidu.com/thumbnail/b46bd09e7935dd6d7498d723901625eb?fid=3205907199-250528-832477968188321&time=1459774800&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-9hc5KQk9lriKFnT1K332t0FAwWY%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=2200454284200991524&dp-callid=0&size=c710_u500&quality=100"
+        },
+        {
+            "name": "3333",
+            "type": 2,
+            "icon_url": "http://d.pcs.baidu.com/thumbnail/b46bd09e7935dd6d7498d723901625eb?fid=3205907199-250528-832477968188321&time=1459774800&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-9hc5KQk9lriKFnT1K332t0FAwWY%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=2200454284200991524&dp-callid=0&size=c710_u500&quality=100"
+        }
+    ],
+    "stringcolor": "#FFFFFFFF"
+}
