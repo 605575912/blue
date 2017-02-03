@@ -48,59 +48,60 @@
     <uses-permission android:name="com.sonyericsson.home.permission.BROADCAST_BADGE" />
     <uses-permission android:name="com.sec.android.provider.badge.permission.READ" />
     <uses-permission android:name="com.sec.android.provider.badge.permission.WRITE" />
-    <uses-permission android:name="com.oppo.launcher.permission.READ_SETTINGS"/>
-    <uses-permission android:name="com.oppo.launcher.permission.WRITE_SETTINGS"/>
-    <uses-permission android:name="com.qiku.launcher.permission.READ_SETTINGS"/>
-    <uses-permission android:name="com.qiku.launcher.permission.WRITE_SETTINGS"/>
-    <uses-permission android:name="com.android.launcher3.permission.WRITE_SETTINGS"/>
-    <uses-permission android:name="com.android.launcher3.permission.READ_SETTINGS"/>
-    <uses-permission android:name="com.htc.launcher.permission.READ_SETTINGS"/>
-    <uses-permission android:name="com.htc.launcher.permission.WRITE_SETTINGS"/>
-    <uses-permission android:name="com.google.android.launcher.permission.READ_SETTINGS"/>
-    <uses-permission android:name="com.nd.android.launcher.permission.WRITE_SETTINGS"/>
-    <uses-permission android:name="com.bbk.launcher2.permission.READ_SETTINGS"/>
-    <uses-permission android:name="com.bbk.launcher2.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="com.oppo.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.oppo.launcher.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="com.qiku.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.qiku.launcher.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="com.android.launcher3.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="com.android.launcher3.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.htc.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.htc.launcher.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="com.google.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.nd.android.launcher.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="com.bbk.launcher2.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.bbk.launcher2.permission.WRITE_SETTINGS" />
 
 
-    <uses-permission android:name="com.yulong.android.launcher3.READ_SETTINGS"/>
-    <uses-permission android:name="com.yulong.android.launcher3.WRITE_SETTINGS"/>
-    <uses-permission android:name="com.sonyericsson.home.READ_SETTINGS"/>
-    <uses-permission android:name="com.sonyericsson.home.WRITE_SETTINGS"/>
-    <uses-permission android:name="com.meizu.flyme.launcher.permission.READ_SETTINGS"/>
-    <uses-permission android:name="com.meizu.flyme.launcher.permission.WRITE_SETTINGS"/>
-    <uses-permission android:name="com.android.launcher2.permission.READ_SETTINGS"/>
-    <uses-permission android:name="org.adw.launcher.permission.READ_SETTINGS"/>
-    <uses-permission android:name="com.qihoo360.launcher.permission.READ_SETTINGS"/>
-    <uses-permission android:name="com.lge.launcher.permission.READ_SETTINGS"/>
-    <uses-permission android:name="net.qihoo.launcher.permission.READ_SETTINGS"/>
-    <uses-permission android:name="org.adwfreak.launcher.permission.READ_SETTINGS"/>
-    <uses-permission android:name="org.adw.launcher_donut.permission.READ_SETTINGS"/>
-    <uses-permission android:name="com.huawei.launcher3.permission.READ_SETTINGS"/>
-    <uses-permission android:name="com.fede.launcher.permission.READ_SETTINGS"/>
-    <uses-permission android:name="com.sec.android.app.twlauncher.settings.READ_SETTINGS"/>
-    <uses-permission android:name="com.tencent.qqlauncher.permission.READ_SETTINGS"/>
-    <uses-permission android:name="com.huawei.launcher2.permission.READ_SETTINGS"/>
-    <uses-permission android:name="com.ebproductions.android.launcher.permission.READ_SETTINGS"/>
-    <uses-permission android:name="com.nd.android.launcher.permission.READ_SETTINGS"/>
-    <uses-permission android:name="com.yulong.android.launcher.permission.READ_SETTINGS"/>
-    <uses-permission android:name="com.android.mylauncher.permission.READ_SETTINGS"/>
-    <uses-permission android:name="telecom.mdesk.permission.READ_SETTINGS"/>
-    <uses-permission android:name="com.ztemt.launcher.permission.READ_SETTINGS"/>
-    <uses-permission android:name="cn.nubia.launcher.permission.READ_SETTINGS"/>
-    <uses-permission android:name="dianxin.permission.READ_SETTINGS"/>
+    <uses-permission android:name="com.yulong.android.launcher3.READ_SETTINGS" />
+    <uses-permission android:name="com.yulong.android.launcher3.WRITE_SETTINGS" />
+    <uses-permission android:name="com.sonyericsson.home.READ_SETTINGS" />
+    <uses-permission android:name="com.sonyericsson.home.WRITE_SETTINGS" />
+    <uses-permission android:name="com.meizu.flyme.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.meizu.flyme.launcher.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="com.android.launcher2.permission.READ_SETTINGS" />
+    <uses-permission android:name="org.adw.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.qihoo360.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.lge.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="net.qihoo.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="org.adwfreak.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="org.adw.launcher_donut.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.huawei.launcher3.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.fede.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.sec.android.app.twlauncher.settings.READ_SETTINGS" />
+    <uses-permission android:name="com.tencent.qqlauncher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.huawei.launcher2.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.ebproductions.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.nd.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.yulong.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.android.mylauncher.permission.READ_SETTINGS" />
+    <uses-permission android:name="telecom.mdesk.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.ztemt.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="cn.nubia.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="dianxin.permission.READ_SETTINGS" />
     <uses-permission android:name="com.google.android.launcher.permission.WRITE_SETTING"></uses-permission>
     <uses-permission android:name="com.google.android.launcher.permission.READ_SETTINGS"></uses-permission>
 
     <!-- 联想所需的权限 -->
-    <uses-permission android:name="com.lenovo.launcher.permission.READ_SETTINGS"/>
-    <uses-permission android:name="com.lenovo.launcher.permission.WRITE_SETTINGS"/>
-    <uses-permission android:name="com.lenovo.launcher.permission.RECEIVE_LAUNCH_BROADCASTS"/>
+    <uses-permission android:name="com.lenovo.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.lenovo.launcher.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="com.lenovo.launcher.permission.RECEIVE_LAUNCH_BROADCASTS" />
+
     <supports-screens
-        android:smallScreens="true"
-        android:normalScreens="true"
+        android:anyDensity="true"
         android:largeScreens="true"
+        android:normalScreens="true"
         android:resizeable="true"
-        android:anyDensity="true" />
+        android:smallScreens="true" />
     <application
         android:name=".BlueApp"
         android:allowBackup="true"
@@ -111,8 +112,8 @@
         <activity
             android:name=".launcher.LauncherActivity"
             android:configChanges="locale|keyboardHidden|orientation"
-            android:label="@string/app_name"
             android:icon="@drawable/leak_canary_icon"
+            android:label="@string/app_name"
             android:launchMode="standard"
             android:windowSoftInputMode="adjustPan">
             <intent-filter>
@@ -135,12 +136,16 @@
         <!--<action android:name="com.show.blue.launcher.LauncherService" />-->
         <!--</intent-filter>-->
         <!--</service>-->
+        <!-- 私有进程-->
         <service
             android:name=".service.LauncherService"
-            android:enabled="true"
-            android:exported="true"
-            android:label="AutoShareService">
+            android:label="AutoShareService"
+            android:process=":launcher">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
 
+                <action android:name="com.show.blue.launcher.LauncherService" />
+            </intent-filter>
         </service>
         <service
             android:name=".service.ShowIntentService"
@@ -162,8 +167,8 @@
             android:name=".home.HomeActivity"
             android:configChanges="locale|keyboardHidden|orientation"
             android:label="@string/app_name"
-            android:resizeableActivity="true"
             android:launchMode="standard"
+            android:resizeableActivity="true"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.Home"
             android:windowSoftInputMode="adjustPan"></activity>

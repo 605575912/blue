@@ -5,6 +5,7 @@ import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
@@ -49,6 +50,7 @@ public class LauncherActivity extends BaseActivity {
     TextView tv_time;
     ImageView imageview;
     Bitmap adverbitmap;
+    public static  int a = 0;
     private NotificationManager mNotificationManager;
     String ACTION_NOTIFICATION_DELETE = "ACTION_NOTIFICATION_DELETE";
     private PendingIntent mDeletePendingIntent;
@@ -113,6 +115,8 @@ public class LauncherActivity extends BaseActivity {
 //        }
 //
 ////        finish();
+        a++;
+        startService();
         welcomebanner();
     }
 
@@ -374,10 +378,10 @@ public class LauncherActivity extends BaseActivity {
 //        Intent intentService = new Intent("com.show.blue.launcher.LauncherService");
 //        intentService.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 //        startService(intentService);
-//        Intent intent = new Intent();
-//        ComponentName componetName = new ComponentName("com.show.blue.launcher", "com.show.blue.launcher.LauncherService");
-//        intent.setComponent(componetName);
-//        startActivity(intent);
+        Intent intent = new Intent();
+        ComponentName componetName = new ComponentName("com.show.blue", "com.show.blue.service.LauncherService");
+        intent.setComponent(componetName);
+        startService(intent);
 //        Intent intentService = new Intent();
 //        intentService.setClass(this, LauncherService.class);
 //        startService(intentService);

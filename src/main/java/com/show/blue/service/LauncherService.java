@@ -7,6 +7,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.IBinder;
 
+import com.show.blue.launcher.LauncherActivity;
 import com.show.blue.servicehandler.ServiceHandler;
 import com.show.blue.servicehandler.SplashHandler;
 import com.support.loader.ServiceLoader;
@@ -31,7 +32,7 @@ public class LauncherService extends Service {
     @Override
     public void onCreate() {
         super.onCreate();
-        LogBlue.i("TAG","===========");
+        LogBlue.i("TAG","==========="+ LauncherActivity.a);
         initApp();
         onCreateHandler();
 //        updateAPK();
