@@ -2,21 +2,11 @@ package com.show.blue;
 
 import android.app.Activity;
 import android.content.Context;
-import android.graphics.Color;
-import android.support.v4.view.ViewCompat;
-import android.support.v4.view.ViewPropertyAnimatorCompat;
-import android.support.v4.view.ViewPropertyAnimatorListener;
-import android.support.v4.view.ViewPropertyAnimatorUpdateListener;
-import android.util.Log;
-import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.TranslateAnimation;
 import android.widget.AdapterView;
 import android.widget.TextView;
-import android.widget.Toast;
-import android.widget.ViewSwitcher;
 
 import com.support.loader.adapter.Holder;
 import com.support.loader.adapter.ItemData;
@@ -25,21 +15,15 @@ import com.support.loader.adapter.UIListAdapter;
 import javax.inject.Inject;
 
 public class ChooseItem extends ItemData {
-    @Inject
     protected String name = "";
-    @Inject
     protected String tst = "";
     int tag = 0;
     Activity activity;
-    TopLinkedHashMap topLinkedHashMap;
 
-    public ChooseItem(String name, int tag, Activity activity, TopLinkedHashMap topLinkedHashMap) {
+    public ChooseItem(String name, int tag, Activity activity) {
         this.name = name;
         this.tag = tag;
-        this.topLinkedHashMap = topLinkedHashMap;
-        topLinkedHashMap.init(tag, tag + "初始化未完成");
         this.activity = activity;
-        ((TestActivity) activity).getappComponent().inject(this);
     }
 
     public String getName() {
@@ -50,7 +34,6 @@ public class ChooseItem extends ItemData {
         this.name = name;
     }
 
-    @Inject
     public int getTag() {
         return tag;
     }
@@ -107,17 +90,7 @@ public class ChooseItem extends ItemData {
 //        } else {
 //            viewHolder.download_btn.showProgress(true);
 //            viewHolder.download_btn.setspeedSize(DownloadField.START, 250);
-        viewHolder.button9.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (i) {
-                    topLinkedHashMap.completeput(tag);
-                } else {
-                    i = true;
-                    topLinkedHashMap.put(tag, tag + "的控件有未完成的信息");
-                }
-            }
-        });
+        viewHolder.button9.setText(getName());
 //        }
 
 //

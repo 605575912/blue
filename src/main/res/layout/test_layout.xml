@@ -6,16 +6,6 @@
     android:orientation="vertical">
 
 
-    <EditText
-        android:id="@+id/tv_name"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:textColor="@color/dgray"
-        android:textSize="15sp" />
-
-
     <ListView
         android:id="@+id/list_view"
         android:layout_width="match_parent"

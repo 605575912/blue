@@ -62,11 +62,5 @@
     <attr name="_roundy" format="dimension" />
     <attr name="with_cover" format="boolean"/>
   </declare-styleable>
-  <declare-styleable name="RoundTextView">
-    <attr name="background_fillcolor" format="reference|color" />
-    <attr name="t_roundx" format="dimension" />
-    <attr name="t_roundy" format="dimension" />
-    <attr name="strokewidth_color" format="reference|color" />
-    <attr name="v_strokewidth" format="dimension" />
-  </declare-styleable>
+
 </resources>

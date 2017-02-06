@@ -42,13 +42,6 @@
       <sourceFolder url="file://$MODULE_DIR$/src/BlueDebug/jni" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/BlueDebug/rs" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/BlueDebug/shaders" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/r/androidTest/Blue/debug" isTestSource="true" generated="true" />
-      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/aidl/androidTest/Blue/debug" isTestSource="true" generated="true" />
-      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/buildConfig/androidTest/Blue/debug" isTestSource="true" generated="true" />
-      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/rs/androidTest/Blue/debug" isTestSource="true" generated="true" />
-      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/apt/androidTest/Blue/debug" isTestSource="true" generated="true" />
-      <sourceFolder url="file://$MODULE_DIR$/build/generated/res/rs/androidTest/Blue/debug" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/build/generated/res/resValues/androidTest/Blue/debug" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/testBlueDebug/res" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/testBlueDebug/resources" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/testBlueDebug/assets" type="java-test-resource" />
@@ -57,6 +50,13 @@
       <sourceFolder url="file://$MODULE_DIR$/src/testBlueDebug/jni" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/testBlueDebug/rs" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/testBlueDebug/shaders" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/r/androidTest/Blue/debug" isTestSource="true" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/aidl/androidTest/Blue/debug" isTestSource="true" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/buildConfig/androidTest/Blue/debug" isTestSource="true" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/rs/androidTest/Blue/debug" isTestSource="true" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/apt/androidTest/Blue/debug" isTestSource="true" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/res/rs/androidTest/Blue/debug" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/res/resValues/androidTest/Blue/debug" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/Blue/res" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/Blue/resources" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/Blue/assets" type="java-resource" />
@@ -162,8 +162,8 @@
     <orderEntry type="library" exported="" scope="TEST" name="mockito-core-1.9.5" level="project" />
     <orderEntry type="library" exported="" name="httpmime-4.3" level="project" />
     <orderEntry type="library" exported="" name="leakcanary-android-1.4-beta2" level="project" />
-    <orderEntry type="library" exported="" scope="TEST" name="multidex-instrumentation-1.0.1" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="objenesis-1.0" level="project" />
+    <orderEntry type="library" exported="" scope="TEST" name="multidex-instrumentation-1.0.1" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="icu4j-53.1" level="project" />
     <orderEntry type="library" exported="" name="leakcanary-analyzer-1.4-beta2" level="project" />
     <orderEntry type="library" exported="" name="android-support-v7-palette" level="project" />

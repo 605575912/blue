@@ -7,5 +7,4 @@
 
     <dimen name="pk_round">2dp</dimen>
     <dimen name="pk_padding">8dp</dimen>
-    <dimen name="hpv6_roundxy">3dp</dimen>
 </resources>

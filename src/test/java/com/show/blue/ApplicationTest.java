@@ -1,6 +1,7 @@
 package com.show.blue;
 
 import android.graphics.BitmapFactory;
+import android.os.Handler;
 
 import org.apache.tools.zip.ZipEntry;
 import org.apache.tools.zip.ZipFile;
@@ -132,6 +133,9 @@ public class ApplicationTest {
 //        inOrderTraverse(root);
 //        endOrderTraverse(root);
 //        iterativePreorder(root);
+        int ii = 7;
+        ii &= ~ii;
+        System.out.println("==="+ii);
         int[] args = new int[]{1, 2, 3, 4, 5, 78, 2, 3, 4, 0, 1, 2, 11, 23};
         insertSort(args);
         for (int i = 0; i < args.length; i++) {
@@ -168,6 +172,7 @@ public class ApplicationTest {
 
 
     }
+
 
     interface C {
         void show(A a);

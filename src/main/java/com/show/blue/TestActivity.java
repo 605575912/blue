@@ -2,12 +2,10 @@ package com.show.blue;
 
 
 import android.app.Activity;
-import android.app.Notification;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
-import android.content.res.ColorStateList;
 import android.content.res.Configuration;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -18,27 +16,17 @@ import android.graphics.Paint;
 import android.graphics.Point;
 import android.graphics.Rect;
 import android.graphics.Shader;
-import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.v4.app.NotificationCompat;
-import android.telephony.TelephonyManager;
-import android.text.Editable;
 import android.text.TextUtils;
-import android.text.TextWatcher;
 import android.util.DisplayMetrics;
 import android.util.Log;
-import android.util.LruCache;
-import android.view.Gravity;
 import android.view.KeyEvent;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewConfiguration;
 import android.view.ViewGroup;
-import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.RemoteViews;
 import android.widget.TextView;
 
 import com.example.gaussianblur.blur.FastBlur;
@@ -53,8 +41,6 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -66,7 +52,7 @@ public class TestActivity extends BaseActivity {
 
 
     //    View view;
-    AppComponent appComponent;
+
     Handler h;
     int i = 0;
     int before;
@@ -83,25 +69,9 @@ public class TestActivity extends BaseActivity {
     }
 
 
-    private void setFadingMarquee() {
-        ViewConfiguration vc = ViewConfiguration.get(this);
-        ViewConfiguration viewConfiguration;
-        Object obj = ReflectHelper.getDeclaredFieldValue(vc,
-                ViewConfiguration.class.getName(), "mFadingMarqueeEnabled");
-        if (obj != null && obj instanceof Boolean) {
-            Boolean enabled = (Boolean) obj;
-            if (!enabled) {
-                ReflectHelper.setDeclaredFieldValue(vc,
-                        ViewConfiguration.class.getName(),
-                        "mFadingMarqueeEnabled", Boolean.TRUE);
-            }
-        }
-    }
 
 
     int s = 2;
-    TopLinkedHashMap topLinkedHashMap;
-    EditText tv_name;
     String string = "";
 
 
@@ -188,34 +158,7 @@ public class TestActivity extends BaseActivity {
     }
 
     // 返回三个资源值, 背景资源, 标题资源, 正文资源
-    public int[] getSpecialColors(Context context) {
-        String deviceUa = (Build.VERSION.SDK);// Integer.parseInt(Build.VERSION.SDK);
-        deviceUa = (deviceUa == null ? "" : deviceUa.toLowerCase());
-        int[] colors = null;
-        final String[] USE_SPE_OF_DEVICES = {"bird-t9609", "tcl m2u"};
-        for (String deviceua : USE_SPE_OF_DEVICES) {
-            if (deviceUa.contains(deviceua)) {
-//                colors = context.getResources().getIntArray(R.array.bird_t9609_mmnotification_colors);
-            }
-        }
-        if (colors == null) {
-            colors = tryGetColors(context);
-        }
-        return colors;
-    }
 
-    private int[] tryGetColors(Context mContext) {
-        int[] mColors = getColorsFromNotificationLayout(mContext);
-        if (mColors == null) {
-            final int SDK_VER = android.os.Build.VERSION.SDK_INT;
-            if (SDK_VER >= 23) {// 统一使用android6.0 默认背景色和文字颜色 白底黑字
-                mColors = mContext.getResources().getIntArray(R.array.default_mmnotification_colors_v23);
-            } else if (SDK_VER <= 20) {// 统一使用android4.0 默认背景色和文字颜色 黑底白字
-                mColors = mContext.getResources().getIntArray(R.array.default_mmnotification_colors_v14);
-            }
-        }
-        return mColors;
-    }
 
     /**
      * 找第几个文本
@@ -243,58 +186,6 @@ public class TestActivity extends BaseActivity {
         return null;
     }
 
-    private int[] getColorsFromNotificationLayout(Context mContext) {
-        NotificationCompat.Builder builder = new NotificationCompat.Builder(mContext);
-        RemoteViews contentView = null;
-        Notification nf = builder.build();
-        ;
-        contentView = nf.contentView;
-        if (contentView == null) {
-            contentView = nf.tickerView;
-        }
-        if (contentView == null) {
-            return null;
-        }
-        int bgcolor, titlecolor, infocolor;
-        int layoutid = contentView.getLayoutId();
-        LayoutInflater inflater = LayoutInflater.from(mContext);
-        View view = inflater.inflate(layoutid, null);
-        View childview = view.findViewById(android.R.id.title);
-        if (childview == null) { //不是标准的通知栏，直接返回
-            childview = findTextView((ViewGroup) view, 0); //找第一1个TextView
-            if (childview == null) {
-                return null;
-            }
-        }
-        titlecolor = mContext.getResources().getColor(android.R.color.white);
-        infocolor = titlecolor;
-        if (childview instanceof TextView) {
-//            ColorStateList csl = ((TextView) childview).getCurrentTextColor();
-            titlecolor = ((TextView) childview).getDrawingCacheBackgroundColor();
-//            titlecolor = csl.getColorForState(childview.getDrawableState(), titlecolor);
-        }
-        Object infoid_obj = ReflectHelper.getStaticFieldValue("com.android.internal.R$id", "info");
-        if (infoid_obj != null) {
-            childview = view.findViewById((Integer) infoid_obj);
-        }
-        if (childview == null) { // 非标准通知栏
-            childview = findTextView((ViewGroup) view, 1); // 找第二个TextView
-        }
-        if (childview != null && childview instanceof TextView) {
-            ColorStateList csl = ((TextView) childview).getTextColors();
-            infocolor = csl.getColorForState(childview.getDrawableState(), titlecolor);
-        }
-
-        bgcolor = getBackgroundColor(mContext, view);
-//        if (isSameColor(bgcolor, titlecolor)) {
-//            if (isWhite(bgcolor)) {
-//                bgcolor = mContext.getResources().getColor(android.R.color.black);
-//            } else {
-//                bgcolor = 0xfffafafa;
-//            }
-//        }
-        return new int[]{bgcolor, titlecolor, infocolor};
-    }
 
     private boolean isSameColor(int bgcolor, int textcolor) {
         bgcolor &= 0x00ffffff;
@@ -320,147 +211,6 @@ public class TestActivity extends BaseActivity {
         return iswhite1 && color > 0x1f;
     }
 
-    private int getBackgroundColor(Context mContext, View view) {
-        int bgcolorid = 0;
-        //com.android.internal.R$color.notification_legacy_background_color see also com.android.systemui.statusbar.ActivatableNotificationView
-//	notification_legacy_background_color = #ff1a1a1a
-//	notification_material_background_color = #fffafafa
-        int targetSDK = mContext.getApplicationInfo().targetSdkVersion;
-        int version = Build.VERSION.SDK_INT;
-        String model = Build.MODEL;
-        String brand = Build.BRAND;
-        Integer exceptBg = getExceptionBgColor(brand, model, version, targetSDK);
-        if (exceptBg != null) {
-            return exceptBg.intValue();
-        }
-        int bgcolor = 0; //0xfffafafa ;
-        int default_bgcolor = 0;
-        if (version <= 20) {
-            default_bgcolor = mContext.getResources().getColor(android.R.color.black);
-        } else if (version == 21) {//三星 SM-A8000 在targetSDK为23时会出现底为透明底，所以给它这个颜色
-            default_bgcolor = 0xfffafafa;
-        }
-        if (targetSDK < version && targetSDK >= Build.VERSION_CODES.GINGERBREAD && targetSDK < 21) { //Build.VERSION_CODES.LOLLIPOP == 21
-            ///frameworks/base/packages/SystemUI/src/com/android/systemui/statusbar
-            //参照com.android.systemui.statusbar.BaseStatusBar 的; applyColorsAndBackgrounds .
-            default_bgcolor = 0xfffafafa; //即为notification_material_background_color，此颜色定义在com.android.systemui.R.color中
-        }
-        Object obj = ReflectHelper.getDeclaredFieldValue(view, "android.view.View", "mBackgroundResource");
-        if (obj != null && obj instanceof Integer) {
-            bgcolorid = ((Integer) obj).intValue();
-            if (bgcolorid != 0) {
-                try {
-                    bgcolor = mContext.getResources().getColor(bgcolorid);
-                    return bgcolor;
-                } catch (Exception e) {
-
-                }
-            }
-        }
-        Drawable dw = view.getBackground();
-        if (dw == null) {
-            return default_bgcolor;
-        }
-        //HM NOTE 4.4.2 机采用这种方法取出来的背景就正确了，原先的效果是黑色的
-        Bitmap bg = Bitmap.createBitmap(8, 8,
-                Bitmap.Config.ARGB_8888);
-        Canvas canvas = new Canvas(bg);
-        dw.draw(canvas);
-        bgcolor = bg.getPixel(3, 3);
-        bg.recycle();
-        return bgcolor;
-    }
-
-    private Integer getExceptionBgColor(String brand, String model, int sdkversion, int targetsdk) {
-//        for (ExceptionColor e: EXCEPTION_COLORS ){
-//            if (e.mBrand.equals(brand) && e.mModel.equals(model) && e.mSDKVersion == sdkversion /*&& e.mTargetSDK == targetsdk*/){
-//                return Integer.valueOf(e.mBackgroundColor);
-//            }
-//        }
-        return null;
-    }
-
-    private void dial(String number) {
-        Class<TelephonyManager> c = TelephonyManager.class;
-        Method getITelephonyMethod = null;
-        try {
-            getITelephonyMethod = c.getDeclaredMethod("getITelephony",
-                    (Class[]) null);
-            getITelephonyMethod.setAccessible(true);
-        } catch (SecurityException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        } catch (NoSuchMethodException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-
-        try {
-            TelephonyManager tManager = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
-            Object iTelephony;
-            iTelephony = (Object) getITelephonyMethod.invoke(tManager, (Object[]) null);
-            Method dial = iTelephony.getClass().getDeclaredMethod("dial", String.class);
-            dial.invoke(iTelephony, number);
-        } catch (IllegalArgumentException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        } catch (IllegalAccessException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        } catch (SecurityException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        } catch (NoSuchMethodException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        } catch (InvocationTargetException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-    }
-
-    private void call(Activity activity, String number) {
-        Class<TelephonyManager> c = TelephonyManager.class;
-        Method getITelephonyMethod = null;
-        try {
-            getITelephonyMethod = c.getDeclaredMethod("getITelephony",
-                    (Class[]) null);
-            getITelephonyMethod.setAccessible(true);
-        } catch (SecurityException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        } catch (NoSuchMethodException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-
-        try {
-            TelephonyManager tManager = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
-            Object iTelephony;
-            iTelephony = (Object) getITelephonyMethod.invoke(tManager, (Object[]) null);
-            Method dial = iTelephony.getClass().getDeclaredMethod("call", String.class, String.class);
-            dial.invoke(iTelephony, "com.show.blue", number);
-
-
-        } catch (IllegalArgumentException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        } catch (IllegalAccessException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        } catch (SecurityException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        } catch (NoSuchMethodException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        } catch (InvocationTargetException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-    }
-
-    DlnaFrameLayout dlnaView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -469,13 +219,6 @@ public class TestActivity extends BaseActivity {
 //        Linkify.addLinks()
 //        String path = "/storage/emulated/0/mm/cache/logoimage/mm_355_1481731200000_1481903999000.png";
 
-        topLinkedHashMap = new TopLinkedHashMap(new ChangeListener() {
-            @Override
-            public void OnChanged(String tip) {
-//                button.setTextxt(tip);
-            }
-        });
-        tv_name = (EditText) findViewById(R.id.tv_name);
 
         TD.INSTANCE.string = "不展示的试图";
 //        tv_name.setText(TD.INSTANCE.string);
@@ -534,59 +277,16 @@ public class TestActivity extends BaseActivity {
 
         List<ItemData> datas = new ArrayList<>();
         datas.add(new WindItem("", 1, this));
-        datas.add(new TimeItem("", 1, this, topLinkedHashMap));
-        datas.add(new LineItem("", 1, this));
         datas.add(new LightItem("", 1, this));
-        appComponent = DaggerAppComponent.builder().appModule(new AppModule(this)).build();
-        appComponent.inject(this);
-        datas.add(new ChooseItem("", 1, this, topLinkedHashMap));
+        datas.add(new ChooseItem("", 1, this));
 //
-        LruCache c;
-////        Resources res = getResources();
-////        String songsFound = res.getQuantityString(R.plurals.numberOfSongsAvailable, 0, cd);
-        datas.add(new ChooseItem("", 2, this, topLinkedHashMap));
-        datas.add(new ChooseItem("", 3, this, topLinkedHashMap));
-        datas.add(new ChooseItem("", 4, this, topLinkedHashMap));
-        datas.add(new ChooseItem("", 5, this, topLinkedHashMap));
+        datas.add(new ChooseItem("", 2, this));
+        datas.add(new ChooseItem("", 3, this));
+        datas.add(new ChooseItem("", 4, this));
+        datas.add(new ChooseItem("", 5, this));
         UIListAdapter uiListAdapter = new UIListAdapter(this, datas);
         list_view.setAdapter(uiListAdapter);
-//        ActivityManager am = (ActivityManager) this.getSystemService(Context.ACTIVITY_SERVICE);
-//        am.getRunningAppProcesses();
-//        ServiceLoader.getInstance().submit(new Runnable() {
-//            @Override
-//            public void run() {
-//                Looper.prepare();
-//                h = new Handler() {
-//                    @Override
-//                    public void handleMessage(Message msg) {
-//                        super.handleMessage(msg);
-//                        Log.i("TAG", "=====");
-//                        if (msg.what == 2) {
-//                            h.getLooper().quit();
-//                        }
-//                        sendEmptyMessageDelayed(1, 5000);
-//                    }
-//                };
-//                Looper.loop();
-//                Log.i("TAG", "==+++++++===");
-//
-//            }
-//        });
-//        textView.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                if (i == 0) {
-//                    h.sendEmptyMessage(1);
-//                    i++;
-//                } else {
-//                    h.sendEmptyMessage(2);
-//                }
-//
-//            }
-//        });
     }
-
-
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
@@ -660,9 +360,6 @@ public class TestActivity extends BaseActivity {
 
     }
 
-    MainFragmentComponent getappComponent() {
-        return appComponent.mainFragmentComponent();
-    }
 
     double getdensity(Activity activity) {
         Point point;
